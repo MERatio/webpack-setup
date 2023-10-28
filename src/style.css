@@ -1,4 +1,8 @@
 body {
 	background-color: blue;
 	color: yellow;
+
+	/* To test postcss-preset-env's autoprefixer, and polyfill */
+	margin-block: 0;
+	appearance: none;
 }

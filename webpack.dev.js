@@ -1,4 +1,4 @@
-const { mergeWithRules } = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const dev = {
@@ -7,7 +7,7 @@ const dev = {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: ['style-loader'],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -17,11 +17,4 @@ const dev = {
   },
 };
 
-module.exports = mergeWithRules({
-  module: {
-    rules: {
-      test: 'match',
-      use: 'prepend',
-    },
-  },
-})(common, dev);
+module.exports = merge(common, dev);

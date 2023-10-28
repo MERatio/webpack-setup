@@ -1,4 +1,4 @@
-const { mergeWithRules } = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const common = require('./webpack.common.js');
@@ -10,7 +10,7 @@ const prod = {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
     ],
   },
@@ -20,11 +20,4 @@ const prod = {
   },
 };
 
-module.exports = mergeWithRules({
-  module: {
-    rules: {
-      test: 'match',
-      use: 'prepend',
-    },
-  },
-})(common, prod);
+module.exports = merge(common, prod);

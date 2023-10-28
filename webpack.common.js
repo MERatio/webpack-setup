@@ -18,10 +18,6 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: ['css-loader'],
-      },
-      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
