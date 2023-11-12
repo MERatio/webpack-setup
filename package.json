@@ -8,6 +8,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
     "prettier:fix": "npm run prettier -- --write",
+    "prettier:fix:all": "npx prettier . --write",
     "format": "npm run prettier:fix && npm run lint:fix",
     "watch": "webpack --watch --config webpack.dev.js",
     "start": "webpack serve --no-open --config webpack.dev.js",
