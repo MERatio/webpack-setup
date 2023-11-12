@@ -6,6 +6,16 @@ if (process.env.NODE_ENV !== "production") {
   console.log("Looks like we are in development mode!");
 }
 
+// To test babel (> 0.25% browserslistc)
+
+// This should not be transpiled
+const obj = {};
+const foo = obj.foo ?? "default";
+console.log(foo);
+
+// This should be transpiled
+console.log(/[\p{ASCII}&&\p{Decimal_Number}]/v);
+
 function component() {
   const element = document.createElement("pre");
 
