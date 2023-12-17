@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
