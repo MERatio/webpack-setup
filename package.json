@@ -5,9 +5,9 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "pretty": "prettier . --write",
-    "format": "npm run lint && npm run pretty",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "format": "npm run pretty && npm run lint",
     "watch": "webpack --watch --config webpack.dev.js",
     "start": "webpack serve --no-open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
