@@ -9,6 +9,7 @@ const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 
 export default defineConfig([
   includeIgnoreFile(gitignorePath, 'Imported .gitignore patterns'),
+  // Browser
   {
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
@@ -20,5 +21,18 @@ export default defineConfig([
     plugins: { json },
     language: 'json/json',
     extends: ['json/recommended'],
+  },
+  // Node environment
+  {
+    files: ['webpack.config.js', 'webpack.*.js'],
+    plugins: { js },
+    extends: ['js/recommended'],
+    languageOptions: {
+      globals: globals.node,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'script', // CommonJS style (for require)
+      },
+    },
   },
 ]);
