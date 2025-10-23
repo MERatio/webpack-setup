@@ -24,7 +24,7 @@ export default defineConfig([
   },
   // Node environment
   {
-    files: ['webpack.config.js', 'webpack.*.js'],
+    files: ['webpack.*.js'],
     plugins: { js },
     extends: ['js/recommended'],
     languageOptions: {

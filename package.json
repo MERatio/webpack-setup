@@ -21,9 +21,12 @@
   "homepage": "https://github.com/MERatio/webpack-setup#readme",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
     "@eslint/compat": "^1.4.0",
     "@eslint/js": "^9.38.0",
     "@eslint/json": "^0.13.2",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "eslint": "^9.38.0",
