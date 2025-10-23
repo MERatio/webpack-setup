@@ -25,7 +25,7 @@ const prod = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader],
       },
     ],
